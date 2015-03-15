@@ -19,7 +19,7 @@ public class Varasto {
 
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
         if (tilavuus > 0.0) {
-            this.tilavuus = tilavuus -1;
+            this.tilavuus = tilavuus;
         } else // virheellinen, nollataan
         {
             this.tilavuus = 0.0;  // => käyttökelvoton varasto
@@ -55,7 +55,7 @@ public class Varasto {
         }
         if (maara <= paljonkoMahtuu()) // omia aksessoreita voi kutsua
         {
-            saldo = saldo + maara;          // ihan suoraan sellaisinaan
+            saldo = saldo + maara  + 1;          // ihan suoraan sellaisinaan
         } else {
             saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!
         }
